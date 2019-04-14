@@ -31,11 +31,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp" />
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/selectImg_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/selectImg_btn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/selectImg_btn"

@@ -18,9 +18,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
-
-    private TextView mTextMessage;
+public class DecodeImg extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -29,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    return true;
+                    startActivity(new Intent(DecodeImg.this, MainActivity.class));
                 case R.id.navigation_dashboard:
-                    startActivity(new Intent(MainActivity.this, DecodeImg.class));
                     return true;
             }
             return false;
@@ -44,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        navigation.setSelectedItemId(R.id.navigation_dashboard);
 
         Button loadImgBtn = (Button)findViewById(R.id.selectImg_btn);
 
