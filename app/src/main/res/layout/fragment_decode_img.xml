@@ -27,7 +27,7 @@
         android:layout_marginBottom="8dp"
         android:scaleType="centerInside"
         android:src="@drawable/loadimg"
-        app:layout_constraintBottom_toTopOf="@+id/selectImg_btn"
+        app:layout_constraintBottom_toTopOf="@+id/selectDecodeImg_btn"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp" />
@@ -38,7 +38,7 @@
     app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/selectImg_btn"
+        android:id="@+id/selectDecodeImg_btn"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:padding="10dp"
-        android:text="@string/encode_file_btn"
+        android:text="@string/decode_file_btn"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

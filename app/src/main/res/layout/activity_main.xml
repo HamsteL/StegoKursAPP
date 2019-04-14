@@ -27,7 +27,7 @@
         android:layout_marginBottom="8dp"
         android:scaleType="centerInside"
         android:src="@drawable/loadimg"
-        app:layout_constraintBottom_toTopOf="@+id/selectImg_btn"
+        app:layout_constraintBottom_toTopOf="@+id/selectDecodeImg_btn"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp" />
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/selectImg_btn"
+        android:id="@+id/selectDecodeImg_btn"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

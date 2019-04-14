@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -28,6 +27,8 @@ public class DecodeImg extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     startActivity(new Intent(DecodeImg.this, MainActivity.class));
+                    overridePendingTransition(0,0);
+                    return true;
                 case R.id.navigation_dashboard:
                     return true;
             }
@@ -39,19 +40,19 @@ public class DecodeImg extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_decode_img);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         navigation.setSelectedItemId(R.id.navigation_dashboard);
 
-        Button loadImgBtn = (Button)findViewById(R.id.selectImg_btn);
+        Button loadImgBtn = (Button)findViewById(R.id.selectDecodeImg_btn);
 
         loadImgBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                Log.d("LOG: ","DECODE");
                 Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
                 photoPickerIntent.setType("image/*");
                 startActivityForResult(photoPickerIntent, GALLERY_REQUEST);
